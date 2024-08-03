@@ -1,8 +1,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  background: url('components/bg8.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 .header {
@@ -32,6 +34,37 @@ body {
   color: #ffffff;
 }
 
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: white;
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
 .section {
   padding: 160px 100px;
   margin: 0;
@@ -41,13 +74,7 @@ body {
   visibility: hidden;
 }
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
-
-.glassmorphism {
+.section .glassmorphism {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.1); /* Glass effect */
   border-radius: 10px;
@@ -72,11 +99,17 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #0b0808b3; /* Semi-transparent footer */
+  background-color:#0b0808b3 ; /* Semi-transparent footer */
 }
 
 .footer .social-links a {
   margin: 0 10px;
   text-decoration: none;
   color: #ffffff;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
