@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div style={{ paddingTop: '60px', paddingBottom: '60px' }}>
       <Header />
       <main>{children}</main>
       <Footer />

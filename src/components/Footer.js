@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#f8f8f8' }}>
+    <footer style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#f8f8f8', position: 'fixed', bottom: 0, width: '100%' }}>
       <div>
         <Link to="/">
           <img src="/logo.png" alt="Logo" style={{ height: '40px' }} />
@@ -26,6 +26,9 @@ const Footer = () => {
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+         
         </a>
       </div>
     </footer>
