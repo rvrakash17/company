@@ -1,21 +1,21 @@
 import React from 'react';
 
-const Header = () => {
+function Header() {
   return (
-    <header>
+    <header className="header">
+      <div className="logo">UIOP</div>
       <nav>
-        <div className="logo">UIOP</div>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about-us">About us</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact-us">Contact us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact us</a></li>
         </ul>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;
