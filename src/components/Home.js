@@ -1,11 +1,13 @@
 import React from 'react';
-import Layout from './Layout';
 
 const Home = () => {
   return (
-    <Layout>
-      <div>Welcome to our Tech Startup!</div>
-    </Layout>
+    <section id="home" className="home">
+      <div className="home">
+        <h1>Who We Are</h1>
+        <p>Hello Nanba Vanakkam, What Can We Do!</p>
+      </div>
+    </section>
   );
 };
 
