@@ -1,16 +1,17 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('components/bg8.jpg') no-repeat center center fixed;
+  background: url('components/bg7.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
   overflow-x: hidden;
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 98%;
   background-color: #0b0808b3; /* Semi-transparent header */
   display: flex;
   justify-content: space-between;
@@ -26,12 +27,43 @@ body {
 .header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .header nav ul li a {
   text-decoration: none;
   color: #ffffff;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background:  #00ab3c;
+  transition: width 0.3s ease;
+  bottom: -5px;
+  left: 0;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a:focus,
+.header nav ul li a:active {
+  color: #00ab3c;
+}
+
+.header nav ul li a:hover::after,
+.header nav ul li a:focus::after,
+.header nav ul li a:active::after {
+  width: 100%;
+}
+
+/* Specific styling for the Contact us link */
+.header nav ul li a[href="#contact"] {
+; /* Different color for emphasis */
 }
 
 .hero {
@@ -80,15 +112,15 @@ body {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  color: #ffffff; /* Text color */
+  color: #ffffff;
 }
 
 .section h2 {
-  color: #00aaff;
+  color: #00ab3c;
 }
 
 .section button {
-  background-color: #007bff;
+  background-color:#00ab3c;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -99,7 +131,7 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background-color:#0b0808b3 ; /* Semi-transparent footer */
+  background-color: #0b0808b3;
 }
 
 .footer .social-links a {
