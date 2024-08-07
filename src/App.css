@@ -61,9 +61,8 @@ body {
   width: 100%;
 }
 
-/* Specific styling for the Contact us link */
 .header nav ul li a[href="#contact"] {
-; /* Different color for emphasis */
+; 
 }
 
 .hero {

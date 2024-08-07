@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BlogCard from './BlogCard';
+import BlogCard from './Blogcard';
 import './Blog.css';
 
 const blogPosts = [
