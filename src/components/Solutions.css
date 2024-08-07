@@ -1,0 +1,124 @@
+/* General Styles */
+.solutions-page {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 100px 20px; /* Padding for content area */
+    max-width: 1200px;
+  }
+  
+  /* Header */
+  .solutions-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #3123231a; /* Semi-transparent background for glassmorphism */
+    border-bottom: 2px solid #3123231a;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-radius: 10px;
+  }
+  
+  /* Header Text */
+  .solutions-header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .solutions-header p {
+    font-size: 1.2rem;
+    color: #b3b1b1;
+  }
+  
+  /* Sections */
+  section {
+    margin: 40px 0;
+  }
+  
+  /* Section Title */
+  section h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  /* Grid Layout for Solutions */
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+  }
+  
+  /* Grid Item */
+  .solution-item {
+    padding: 20px;
+    background: #3123231a; /* Glassmorphism effect */
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    border-radius: 8px;
+    border: 1px solid #322f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Hover Effect for Grid Item */
+  .solution-item:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  /* Item Title */
+  .solution-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  /* Item Description */
+  .solution-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* View Button */
+  .solution-item a {
+    background-color: #00ab3c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Hover Effect for View Button */
+  .solution-item a:hover {
+    background-color: #00b33967; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .solutions-header h1 {
+      font-size: 2rem;
+    }
+  
+    .solutions-header p {
+      font-size: 1rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .solution-item h3 {
+      font-size: 1.25rem;
+    }
+  
+    .solution-item p {
+      font-size: 0.9rem;
+    }
+  }
+  

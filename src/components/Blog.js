@@ -1,82 +1,38 @@
-// Blog.js
 import React, { useState } from 'react';
-import './Blog.css'; // Import the CSS file
+import BlogCard from './BlogCard';
+import './Blog.css';
 
-function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [newPost, setNewPost] = useState('');
+const blogPosts = [
+  {
+    title: "Understanding Cybersecurity",
+    content: "Learn the basics of cybersecurity and how to protect your data.",
+    link: "https://yourblogsite.com/understanding-cybersecurity"
+  },
+  {
+    title: "Top 10 Design Trends in 2024",
+    content: "Discover the latest trends in UI/UX design for 2024.",
+    link: "https://yourblogsite.com/top-10-design-trends-2024"
+  },
+  // Add more blog posts here
+];
 
-  const handlePostSubmit = (e) => {
-    e.preventDefault();
-    if (newPost.trim()) {
-      setPosts([{ content: newPost, comments: [] }, ...posts]);
-      setNewPost('');
-    }
-  };
-
-  const handleCommentSubmit = (index, comment) => {
-    const updatedPosts = [...posts];
-    updatedPosts[index].comments.push(comment);
-    setPosts(updatedPosts);
-  };
+const Blog = () => {
+  const [posts, setPosts] = useState(blogPosts);
 
   return (
-    <div className="blog">
-      <h1>Blog</h1>
-      <form onSubmit={handlePostSubmit} className="post-form">
-        <textarea
-          value={newPost}
-          onChange={(e) => setNewPost(e.target.value)}
-          placeholder="What's on your mind?"
-          className="post-textarea"
-        ></textarea>
-        <button type="submit" className="post-button">Post</button>
-      </form>
+    <section id="blog" className="blog">
+      <h2>#Blog</h2>
       <div className="posts">
         {posts.map((post, index) => (
           <div key={index} className="post">
+            <h3>{post.title}</h3>
             <p>{post.content}</p>
-            <CommentSection
-              postIndex={index}
-              comments={post.comments}
-              onCommentSubmit={handleCommentSubmit}
-            />
+            <button className="post-button" onClick={() => window.open(post.link, "_blank")}>Read More</button>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
-}
-
-function CommentSection({ postIndex, comments, onCommentSubmit }) {
-  const [newComment, setNewComment] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newComment.trim()) {
-      onCommentSubmit(postIndex, newComment);
-      setNewComment('');
-    }
-  };
-
-  return (
-    <div className="comments">
-      <h3>Comments</h3>
-      <form onSubmit={handleSubmit} className="comment-form">
-        <input
-          type="text"
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-          placeholder="Add a comment"
-          className="comment-input"
-        />
-        <button type="submit" className="comment-button">Comment</button>
-      </form>
-      {comments.map((comment, index) => (
-        <p key={index} className="comment">{comment}</p>
-      ))}
-    </div>
-  );
-}
+};
 
 export default Blog;
