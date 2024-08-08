@@ -1,18 +1,16 @@
 import React, { useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Section from './components/Section';
-import Footer from './components/Footer';
-import Blog from './components/Blog';
-import Careers from './components/Careers'; 
-import Solutions from './components/Solutions';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import HeroSection from './Components/Hero/HeroSection';
+import Footer from './Components/Footer/Footer';
+import Blog from './Components/Blog/Blog';
+import Careers from './Components/Career/Careers'; 
+import Section from './Components/Card/Section';
+import Header from './Components/Header/Header'
+import Solutions from './Components/Solution/Solutions';
 
 function Main() {
   const footerRef = useRef(null);
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-
+  
   const scrollToFooter = () => {
     if (footerRef.current) {
       footerRef.current.scrollIntoView({ behavior: 'smooth' });

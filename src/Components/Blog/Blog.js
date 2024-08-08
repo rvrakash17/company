@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BlogCard from './Blogcard';
 import './Blog.css';
 
 const blogPosts = [
@@ -17,7 +16,7 @@ const blogPosts = [
 ];
 
 const Blog = () => {
-  const [posts, setPosts] = useState(blogPosts);
+  const [posts] = useState(blogPosts);
 
   return (
     <section id="blog" className="blog">
