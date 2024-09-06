@@ -1,12 +1,13 @@
 import React, { useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './Components/Hero/HeroSection';
 import Footer from './Components/Footer/Footer';
 import Blog from './Components/Blog/Blog';
 import Careers from './Components/Career/Careers'; 
 import Section from './Components/Card/Section';
-import Header from './Components/Header/Header'
+import Header from './Components/Header/Header';
 import Solutions from './Components/Solution/Solutions';
+import Contact from './Components/Contact/Contact'; // Import Contact component
 
 function Main() {
   const footerRef = useRef(null);
@@ -34,7 +35,6 @@ function Main() {
     };
 
     window.addEventListener('scroll', handleScroll);
-
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -66,12 +66,13 @@ function Main() {
               title="#Blog"
               description="Read our latest articles on current affairs in security, design trends, and career tips."
             />
-            <Footer ref={footerRef} />
+            <Footer ref={footerRef} className="home-footer" />
           </>
         } />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/careers" element={<Careers />} /> {/* Add the Careers route */}
-        <Route path="/solutions" element={<Solutions/>} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/contact" element={<Contact />} /> {/* Add Contact route */}
       </Routes>
     </>
   );

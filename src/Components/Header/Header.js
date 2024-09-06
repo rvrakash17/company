@@ -1,19 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header({ scrollToFooter }) {
   return (
     <header className="header">
-      <div className="logo">UIOP</div>
-      <nav>
+      <div className="logo">UIT</div>
+      <nav className="navigation">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/solutions">Solutions</a></li>
-          <li><a href="/careers">Careers</a></li> {/* Add link to Careers */}
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="#contact" onClick={(e) => {
-            e.preventDefault(); // Prevent default anchor behavior
-            scrollToFooter();
-          }}>Contact us</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/solutions">Solutions</Link></li>
+          <li><Link to="/careers">Careers</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li> {/* Updated Contact Link */}
         </ul>
       </nav>
     </header>

@@ -10,7 +10,7 @@
   .solutions-header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #3123231a; /* Semi-transparent background for glassmorphism */
+    background-color: rgba(49, 35, 35, 0.102); /* Semi-transparent background for glassmorphism */
     border-bottom: 2px solid #3123231a;
     backdrop-filter: blur(10px); /* Glassmorphism effect */
     border-radius: 10px;
@@ -51,7 +51,7 @@
   /* Grid Item */
   .solution-item {
     padding: 20px;
-    background: #3123231a; /* Glassmorphism effect */
+    background: rgba(49, 35, 35, 0.102); /* Glassmorphism effect */
     backdrop-filter: blur(8px); /* Glassmorphism effect */
     border-radius: 8px;
     border: 1px solid #322f2f;
